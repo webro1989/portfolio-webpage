@@ -1,8 +1,13 @@
-/* General body styling */
+:root {
+    --background-color: linear-gradient(rgb(75, 30, 55), rgb(159, 40, 100), rgb(140, 30, 85));
+    --title-color: #00bcd4;
+    --t-a-p: #f0f0f0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #e9e9e9;
+    color: var(--t-a-p);
     background-color: #121212;
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
@@ -11,8 +16,8 @@ body {
 
 /* Header styling */
 header {
-    background: linear-gradient(rgb(75, 30, 55), rgb(159, 40, 100), rgb(140, 30, 85));
-    color: #e9e9e9;
+    background: var(--background-color);
+    color: var(--t-a-p);
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -37,14 +42,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #e9e9e9;
+    color: var(--t-a-p);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00bcd4; 
+    color: var(--title-color); 
 }
 
 /* Welcome section styling */
@@ -60,7 +65,7 @@ nav ul li a:hover {
     font-weight: 600;
     font-size: 2.5rem;
     margin: 0;
-    color: #00bfd4; 
+    color: var(--title-color); 
     animation: glow 1.5s infinite alternate;
 }
 
@@ -69,16 +74,16 @@ nav ul li a:hover {
     font-weight: 100;
     font-size: 1.5rem;
     margin: 0;
-    color: #00bfd4; 
+    color: var(--title-color); 
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #00bcd4;
+        text-shadow: 0 0 10px var(--title-color);;
     }
     to {
-        text-shadow: 0 0 20px #00bcd4;
+        text-shadow: 0 0 20px var(--title-color);;
     }
 }
 
@@ -93,11 +98,11 @@ nav ul li a:hover {
 
 .project-tile {
     width: 300px;
-    background: linear-gradient(rgb(75, 30, 55), rgb(159, 40, 100), rgb(140, 30, 85));
+    background:  var(--background-color);
     margin: 1rem;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(50, 50, 50, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -110,7 +115,7 @@ nav ul li a:hover {
 .project-tile h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #00bfd9; 
+    color: var(--title-color); 
 }
 
 .project-tile img {
@@ -126,7 +131,7 @@ nav ul li a:hover {
 
 .project-tile p {
     font-size: 1rem;
-    color: #e9e9e9;
+    color: var(--t-a-p);
 }
 
 .project-tile a {
@@ -139,12 +144,12 @@ nav ul li a:hover {
 }
 
 .project-tile a:hover {
-    color: #f0f0f0;
+    color: var(--t-a-p);
 }
 
 /* Contact section styling */
 #contact h4 {
-   color: #f0f0f0;
+   color: var(--t-a-p);
     text-align: center; 
     font-size: 1.3rem;
     margin-left: 34px;
@@ -159,6 +164,7 @@ nav ul li a:hover {
     align-items: center;
     flex-direction: row;
     
+    
 }
 
 #contact ul li {
@@ -168,22 +174,23 @@ nav ul li a:hover {
 
 #contact a {
     
-    color: #00bcd9; 
+    color: inherit; 
     text-decoration: none;
-    margin: 0 auto;
-    font-size: 40px;
-    transition: color 0.3s;
-   
+    display: inline-flex;
+    font-size: 3rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #contact a:hover {
-    color: #ff4081;
+    color: #ff4081; 
+    transform: scale(1.05);
 }
+
 
 /* Footer styling */
 footer {
-    background: linear-gradient(rgb(75, 30, 55), rgb(159, 40, 100), rgb(140, 30, 85));
-    color: #e9e9e9;
+    background:  var(--background-color);
+    color: var(--t-a-p);
     padding: 1rem;
     text-align: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
