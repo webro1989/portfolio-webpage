@@ -1,245 +1,175 @@
-:root {
-    --background-color: linear-gradient(rgb(75, 30, 55), rgb(159, 40, 100), rgb(140, 30, 85));
-    --title-color: #00bcd4;
-    --t-a-p: #f0f0f0;
-}
-
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--t-a-p);
-    background-color: #ffffff;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
-    transition: background-color 0.3s, color 0.3s;
-    padding-top: 60px; 
-}
-
-/* Header styling */
-header {
-    background: var(--background-color);
-    color: var(--t-a-p);
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    z-index: 1000; 
-    transition: background-color 0.3s;
-}
-
-
-/* Navigation styles */
-nav ul {
-    list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+/* Navbar */
+#navbar {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
-nav ul li a {
-    color: var(--t-a-p);
+#navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#navbar nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: var(--title-color); 
+#navbar nav ul li a:hover {
+    color: #ff6b6b;
 }
 
-/* Welcome section styling */
+/* Welcome Section */
 #welcome-section {
     text-align: center;
-    padding: 2rem 0;
-    
-    margin: 50px auto;
+    padding: 2rem;
+    background: #ff6b6b;
+    color: #fff;
 }
 
 #welcome-section h1 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--title-color); 
-    animation: glow 1.5s infinite alternate;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 #welcome-section p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 1.5rem;
-    margin: 0;
-    color: var(--title-color); 
-    animation: glow 1.5s infinite alternate;
+    font-size: 1rem;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px var(--title-color);;
-    }
-    to {
-        text-shadow: 0 0 20px var(--title-color);;
-    }
-}
-
-/* Projects section styling */
+/* Projects Section */
 #projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 1.5rem;
+    justify-content: center;
     padding: 2rem;
-   
 }
 
 .project-tile {
-    width: 300px;
-    background:  var(--background-color);
-    margin: 1rem;
-    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
 }
 
 .project-tile h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: var(--title-color); 
-}
-
-.project-tile img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: opacity 0.3s;
-}
-
-.project-tile img:hover {
-    opacity: 0.8;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .project-tile p {
-    font-size: 1rem;
-    color: var(--t-a-p);
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .project-tile a {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #ff9090; 
+    color: #ff6b6b;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
 .project-tile a:hover {
-    color: var(--t-a-p);
+    text-decoration: underline;
 }
 
-/* Contact section styling */
-#contact h4 {
-   color: var(--t-a-p);
-    text-align: center; 
-    font-size: 1.3rem;
-    margin-left: 34px;
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
 }
 
 #contact ul {
-    
-    list-style: none;
+    list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    
-    
+    gap: 1rem;
+    padding: 0;
 }
 
-#contact ul li {
-    padding: 15px;
-   
+#contact ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-#contact a {
-    
-    color: inherit; 
-    text-decoration: none;
-    display: inline-flex;
-    font-size: 3rem;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+#contact ul li a:hover {
+    color: #ff6b6b;
 }
 
-#contact a:hover {
-    color: #ff4081; 
-    transform: scale(1.05);
-}
-
-
-/* Footer styling */
+/* Footer */
 footer {
-    background:  var(--background-color);
-    color: var(--t-a-p);
-    padding: 1rem;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 1rem;
+    background-color: #222;
+    color: #ccc;
 }
 
 footer p {
+    font-size: 0.8rem;
     margin: 0;
-    font-size: 0.9rem;
 }
 
-/* Media Queries for Responsiveness */
-
-/* Tablets and small screens */
+/* Responsive Design */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    } #welcome-section h1 {
-        margin-top: 20px
+    #navbar nav ul {
+        flex-direction: column;
+    }
+
+    #welcome-section h1 {
+        font-size: 1.8rem;
     }
 
     #projects {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-tile {
-        width: 90%;
-        max-width: 600px;
-    }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-    #welcome-section h1 {
-        font-size: 1.5rem;
-        margin: 30px auto;
+        padding: 1rem;
     }
 
     .project-tile {
         width: 100%;
-        margin: 0.5rem 0;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome-section h1 {
+        font-size: 1.5rem;
     }
 
-    footer p {
-        font-size: 0.8rem;
+    #navbar nav ul {
+        gap: 1rem;
     }
-}  
+
+    #contact ul {
+        gap: 0.5rem;
+    }
+
+    .project-tile h2 {
+        font-size: 1rem;
+    }
+}
