@@ -85,7 +85,47 @@
                                                                                                                                                                                                                                      <a href="https://codepen.io/Hassan-Zaib/pen/abgeYvj" target="_blank">View Project</a> 
                                                                                                                                                                                                                                              </div> 
 
-                                                                                                                                                                                                                                                          </section>                                                   <section id="contact"> 
+                                                                                                                                                                                                                                                          </section> 
+                            <section id="skills">
+                                      <h2>My Skills</h2>
+                                        <div class="skill">
+                                            <span class="skill-name">HTML</span>
+          
+                            <div class="progress-bar">
+                                <div class="progress animate-on-scroll" style="width: 0%;" data-width="90%"></div>
+                                </div>
+
+
+                                                            </div>
+                                                              <div class="skill">
+                                                                  <span class="skill-name">CSS</span>
+                                                                      <div class="progress-bar">
+                                                   
+                                                            <div class="progress animate-on-scroll" style="width: 0%;" data-width="75%"></div>
+                                                            </div>
+
+                                                  
+                                                                                  </div>
+                                                                                    <div class="skill">
+                                                                                        <span class="skill-name">JavaScript</span>
+                                                                                            <div class="progress-bar">
+                                                                                                  <div class="progress animate-on-scroll" style="width: 0;" data-width="50%"></div>
+                                                                                                      </div>
+                                                                                                        </div>
+                                                                                                          <div class="skill">
+                                                                                                              <span class="skill-name">Tailwind CSS</span>
+                                                                                                                  <div class="progress-bar">
+                                                                                                                        <div class="progress animate-on-scroll" style="width: 0;" data-width="50%"></div>
+                                                                                                                            </div>
+                                                                                                                              </div>
+                                                                                                                                <div class="skill">
+                                                                                                                                    <span class="skill-name">React</span>
+                                                                                                                                        <div class="progress-bar">
+                                                                                                                                              <div class="progress animate-on-scroll" style="width: 0;" data-width="45%"></div>
+                                                                                                                                                  </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    </section>
+                                                                                                                                                                                                                       <section id="contact"> 
                                                                                                                                                                                                                                                                 <ul> 
                                                                                                                                                                                                                                                                         <li><a id="profile-link" href="https://github.com/webro1989" target="_blank"><i class="fab fa-github"></i></a></li> 
                                                                                                                                                                                                                                                                             <li><a id="profile-link" href="https://github.com/webro1989" target="_blank"><i class="fab fa-facebook-f"></i></a></li> <li><a id="profile-link" href="https://github.com/webro1989" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
@@ -95,7 +135,22 @@
                                                                                                                                                                                                                                                                                   </footer> 
 
                                                                                                                                                                                                          <script>
-                                                                                                                                                                                                           const observer = new IntersectionObserver((entries) => {
+                               // Detect elements on scroll and animate progress bars
+                               const progressBars = document.querySelectorAll('.animate-on-scroll');
+                               
+                               const handleScroll = () => {
+                                 progressBars.forEach((bar) => {
+                                     const rect = bar.getBoundingClientRect();
+                                         const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                                             if (isVisible) {
+                                                   bar.style.width = bar.getAttribute('data-width'); // Set width from data attribute
+                                                         bar.classList.remove('animate-on-scroll'); // Remove class to prevent re-trigger
+                                                             }
+                                                               });
+                                                               };
+                                                               
+                                                               window.addEventListener('scroll', handleScroll);
+                                                                                                                                                                                                                                           const observer = new IntersectionObserver((entries) => {
                                                                                                                                                                                                                  entries.forEach((entry) => {
                                                                                                                                                                                                                            if (entry.isIntersecting) {
                                                                                                                                                                                                                                          entry.target.classList.add('fade-in-up');
