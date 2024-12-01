@@ -145,4 +145,129 @@
                                                                                                                                                                                                                                                                         font-family: 'Montserrat', sans-serif;
                                                                                                                                                                                                                                                                             font-weight: 600;
                                                                                                                                                                                                                                                                                 color: var(--accent-color);
-                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                .project-tile p {
+                                                                                                                                                                                                                                                                                    font-size: 1rem;
+                                                                                                                                                                                                                                                                                        color: var(--text-primary);
+                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                        .project-tile a {
+                                                                                                                                                                                                                                                                                            display: inline-block;
+                                                                                                                                                                                                                                                                                                margin-top: 1rem;
+                                                                                                                                                                                                                                                                                                    color: var(--accent-color);
+                                                                                                                                                                                                                                                                                                        text-decoration: none;
+                                                                                                                                                                                                                                                                                                            font-weight: 500;
+                                                                                                                                                                                                                                                                                                                transition: color 0.3s;
+                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                .project-tile a:hover {
+                                                                                                                                                                                                                                                                                                                    color: var(--text-primary);
+                                                                                                                                                                                                                                                                                                                    }
+
+                                                        /* Skills Section Styling */
+                                                        #skills {
+                                                          padding: 2rem;
+                                                            background-color: #121212; /* Change as per your theme */
+                                                              color: #f0f0f0;
+                                                                text-align: center;
+                                                                }
+                                                                
+                                                                #skills h2 {
+                                                                  font-size: 2rem;
+                                                                    margin-bottom: 1.5rem;
+                                                                      color: #00bcd4;
+                                                                      }
+                                                                      
+                                                                      /* Individual Skill Styling */
+                                                                      .skill {
+                                                                        margin-bottom: 1rem;
+                                                                          text-align: left;
+                                                                          }
+                                                                          
+                                                                          .skill-name {
+                                                                            font-size: 1.2rem;
+                                                                              margin-bottom: 0.5rem;
+                                                                                display: block;
+                                                                                  font-weight: bold;
+                                                                                  }
+                                                                                  
+                                                                                  /* Progress Bar Styling */
+                                                                                  .progress-bar {
+                                                                                    width: 100%;
+                                                                                      background-color: #333;
+                                                                                        border-radius: 20px;
+                                                                                          overflow: hidden;
+                                                                                            height: 20px;
+                                                                                            }
+                                                                                            
+                                                                                            .progress {
+                                                                                              height: 100%;
+                                                                                                background: linear-gradient(90deg, #00bcd4, #00e676);
+                                                                                                  transition: width 1s ease-in-out;
+                                                                                                    border-radius: 20px;
+                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                /* Footer styling */
+                                                                                                                                                                                                                                                                                                                    footer {
+                                                                                                                                                                                                                                                                                                                        background: var(--header-footer-bg);
+                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
+                                                                                                                                                                                                                                                                                                                                padding: 1rem;
+                                                                                                                                                                                                                                                                                                                                    text-align: center;
+                                                                                                                                                                                                                                                                                                                                        box-shadow: 0 -4px 8px var(--box-shadow);
+                                                                                                                                                                                                                                                                                                                                            position: relative;
+                                                                                                                                                                                                                                                                                                                                                bottom: 0;
+                                                                                                                                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                                                                                                                                        transition: background-color 0.3s, color 0.3s;
+                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                        footer p {
+                                                                                                                                                                                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                font-size: 0.9rem;
+                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                /* Contact section */
+                                                                                                                                                                                                                                                                                                                                                                #contact ul {
+                                                                                                                                                                                                                                                                                                                                                                    list-style: none;
+                                                                                                                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                                                                                                                            justify-content: center;
+                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                                                                                                                                                                                    padding: 1rem 0;
+                                                                                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                                                                                    #contact ul li {
+                                                                                                                                                                                                                                                                                                                                                                                        margin: 0 10px;
+                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                        #contact a {
+                                                                                                                                                                                                                                                                                                                                                                                            color: var(--accent-color);
+                                                                                                                                                                                                                                                                                                                                                                                                text-decoration: none;
+                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 2rem;
+                                                                                                                                                                                                                                                                                                                                                                                                        transition: color 0.3s, transform 0.3s;
+                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                        #contact a:hover {
+                                                                                                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
+                                                                                                                                                                                                                                                                                                                                                                                                                transform: scale(1.1);
+                                                                         }
+@media only screen and (max-width: 480px) {
+ * {
+
+font-size: 16px
+ }
+
+}
+
+@media (max-width: 768px) {
+      #skills {
+          padding: 1rem;
+            }
+
+              .progress-bar {
+                  height: 15px;
+                    }
+
+                      .skill-name {
+                          font-size: 1rem;
+                            }
+                            }
+
