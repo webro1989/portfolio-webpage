@@ -156,30 +156,25 @@ footer {
     }
 }
 
-/* General media query for Android smartphones */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    body {
-        font-size: 14px; /* Adjust font size for better readability */
-        padding: 0 10px;
-    }
-
-    header nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        gap: 10px;
-    }
-
-    #welcome-section {
-        padding: 2rem 1rem;
-        text-align: center; /* Center align content */
+/* Align project tiles to the center on smaller screens */
+@media only screen and (max-width: 480px) {
+    #projects {
+        display: flex;
+        flex-wrap: wrap; /* Allow tiles to wrap on small screens */
+        justify-content: center; /* Align items to the center horizontally */
+        gap: 20px; /* Add spacing between tiles */
+        padding: 0 10px; /* Reduce padding for a compact look */
     }
 
     .project-tile {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px auto; /* Center project tiles */
+        width: 100%; /* Make tiles take full width of the parent */
+        max-width: 300px; /* Limit width for better aesthetics */
+        text-align: center; /* Center text inside the tiles */
     }
 
-    footer {
-        font-size: 12px;
+    .project-tile img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: add rounded corners for better look */
     }
 }
