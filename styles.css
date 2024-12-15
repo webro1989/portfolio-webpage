@@ -95,29 +95,29 @@ header nav a {
 }
 
 /* Contact Section Styling */
-#contact {
+#contact2 {
     background-color: #ecf0f1;
     padding: 2rem 5%;
     text-align: center;
 }
 
-#contact ul {
+#contact2 ul {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-#contact li {
+#contact2 li {
     display: inline-block;
 }
 
-#contact a {
+#contact2 a {
     font-size: 1.5rem;
     color: #2c3e50;
     transition: color 0.3s ease;
 }
 
-#contact a:hover {
+#contact2 a:hover {
     color: #34495e;
 }
 
