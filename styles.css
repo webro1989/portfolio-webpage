@@ -123,8 +123,12 @@ header nav a {
 }
 
 #contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     max-width: 600px;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -132,8 +136,7 @@ header nav a {
 }
 
 #contact-form label {
-    display: block;
-    margin-bottom: 8px;
+    display: inline-block;
     font-weight: bold;
 }
 
@@ -141,7 +144,6 @@ header nav a {
 #contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px auto;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
