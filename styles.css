@@ -121,7 +121,7 @@ header nav a {
 #contact2 a:hover {
     color: #34495e;
 }
-
+#contact h1 {text-align: center}
 #contact-form {
     display: flex;
     flex-direction: column;
