@@ -120,6 +120,24 @@
 
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
+        // Typewriter effect
+const typewriterText = "Welcome to My Portfolio";
+const typewriterElement = document.getElementById("typewriter");
+let i = 0;
+
+function typeWriter() {
+    if (i < typewriterText.length) {
+        typewriterElement.innerHTML += typewriterText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Adjust typing speed (milliseconds per character)
+    }
+}
+
+// Start the effect when the page loads
+window.onload = () => {
+    typeWriter();
+};
+    
     </script>
 </body>
 </html>
