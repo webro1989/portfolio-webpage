@@ -1,216 +1,157 @@
-:root {
-        --background-gradient: linear-gradient(145deg, #1e3a8a, #3b82f6);
-            --header-footer-bg: #1f2937; /* Dark slate */
-                --section-bg: #2d3748; /* Dark gray for sections */
-                    --text-primary: #e2e8f0; /* Light gray for text */
-                        --link-hover: #3b82f6; /* Light blue for hover */
-                            --card-bg: #374151; /* Slightly lighter dark for project cards */
-                                --accent-color: #38bdf8; /* Light blue accent */
-                                    --box-shadow: rgba(0, 0, 0, 0.3);
-                                    }
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-                                    /* Body styling */
-                                    body {
-                                        font-family: 'Roboto', sans-serif;
-                                            line-height: 1.6;
-                                                color: var(--text-primary);
-                                                    background: var(--background-gradient);
-                                                        margin: 0;
-                                                            padding-top: 60px;
-                                                                transition: background-color 0.3s, color 0.3s;
-                                                                }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-                                                                /* Header styling */
-                                                                header {
-                                                                    background: var(--header-footer-bg);
-                                                                        color: var(--text-primary);
-                                                                            padding: 1rem;
-                                                                                text-align: center;
-                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                        position: fixed;
-                                                                                            top: 0;
-                                                                                                left: 0;
-                                                                                                    width: 100%;
-                                                                                                        z-index: 1000;
-                                                                                                            transition: background-color 0.3s;
-                                                                                                            }
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
 
-                                                                                                            /* Navigation styles */
-                                                                                                            nav ul {
-                                                                                                                list-style: none;
-                                                                                                                    padding: 0;
-                                                                                                                    }
+ul {
+    padding: 0;
+    list-style: none;
+}
 
-                                                                                                                    nav ul li {
-                                                                                                                        display: inline;
-                                                                                                                            margin-right: 15px;
-                                                                                                                            }
+header {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-                                                                                                                            nav ul li a {
-                                                                                                                                color: var(--text-primary);
-                                                                                                                                    text-decoration: none;
-                                                                                                                                        font-weight: 700;
-                                                                                                                                            transition: color 0.3s;
-                                                                                                                                            }
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-                                                                                                                                            nav ul li a:hover {
-                                                                                                                                                color: var(--link-hover);
-                                                                                                                                                }
+header nav a {
+    color: #ecf0f1;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
-                                                                                                                                                /* Welcome section */
-                                                                                                                                                #welcome-section {
-                                                                                                                                                    text-align: center;
-                                                                                                                                                        padding: 4rem 1rem;
-                                                                                                                                                            background: var(--section-bg);
-                                                                                                                                                                border-radius: 10px;
-                                                                                                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                                                                                                        color: var(--text-primary);
-                                                                                                                                                                        }
+#projects {
+    padding: 2rem 5%;
+    background-color: #fff;
+}
 
-                                                                                                                                                                        #welcome-section h1 {
-                                                                                                                                                                            font-family: 'Montserrat', sans-serif;
-                                                                                                                                                                                font-weight: 600;
-                                                                                                                                                                                    font-size: 2.5rem;
-                                                                                                                                                                                        margin-bottom: 1rem;
-                                                                                                                                                                                            color: var(--accent-color);
-                                                                                                                                                                                                text-shadow: 0 0 8px var(--accent-color);
-                                                                                                                                                                                                }
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-                                                                                                                                                                                                #welcome-section p {
-                                                                                                                                                                                                    font-size: 1.5rem;
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        }
+.project-tile img {
+    max-width: 100%;
+    border-radius: 8px;
+}
 
-                                                                                                                                                                                                        /* Projects section styling */
-                                                                                                                                                                                                        #projects {
-                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                flex-wrap: wrap;
-                                                                                                                                                                                                                    justify-content: space-around;
-                                                                                                                                                                                                                        padding: 2rem;
-                                                                                                                                                                                                                            background: var(--section-bg);
-                                                                                                                                                                                                                            }
+.project-tile a {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-                               @keyframes fadeInUp {
-                                       from {
-                                               opacity: 0;
-                                                       transform: translateY(50px);
-                                                           }
-                                                               to {
-                                                                       opacity: 1;
-                                                                               transform: translateY(0);
-                                                                                   }
-                                                                                   }
+.project-tile a:hover {
+    background-color: #34495e;
+}
 
-                                                                                   .fade-in-up {
-                                                                                       opacity: 0;
-                                                                                           transform: translateY(50px);
-                                                                                               animation: fadeInUp 1s ease-out forwards;
-                                                                                               }
+/* Welcome Section Styling */
+#welcome-section {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 4rem 5%;
+    text-align: center;
+}
 
-                                                                                                                                                                                                                        .project-tile {
-                                                                                                                                                                                                                                width: 300px;
-                                                                                                                                                                                                                                    background: var(--card-bg);
-                                                                                                                                                                                                                                        margin: 1rem;
-                                                                                                                                                                                                                                            padding: 1rem;
-                                                                                                                                                                                                                                                border-radius: 8px;
-                                                                                                                                                                                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                                                                                                                                                                                        text-align: center;
-                                                                                                                                                                                                                                                            transition: transform 0.3s, box-shadow 0.3s;
-                                                                                                                                                                                                                                                            }
+#welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-                                                       .project-tile img {
-                                                               width: 100%; /* Ensures the image takes up the full width of its container */
-                                                                   height: auto; /* Maintains the aspect ratio */
-                                                                       border-radius: 8px; /* Gives the images rounded corners */
-                                                                           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
-                                                                               transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animates changes for hover effects */
-                                                                               }
+#welcome-section p {
+    font-size: 1.2rem;
+}
 
-                                                                               .project-tile img:hover {
-                                                                                   transform: scale(1.05); /* Slight zoom on hover */
-                                                                                       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances shadow on hover */
-                                                                                       }
-                                                                                       
-                                                                                                                                                                    .hidden {
-                                                                                                                                                                            opacity: 0;
-                                                                                                                                                                                transform: translateY(50px);
-                                                                                                                                                                                }
+/* Contact Section Styling */
+#contact {
+    background-color: #ecf0f1;
+    padding: 2rem 5%;
+    text-align: center;
+}
 
-                                                                                                                                                                                                                                                            .project-tile:hover {
-                                                                                                                                                                                                                                                                transform: scale(1.05);
-                                                                                                                                                                                                                                                                    box-shadow: 0 8px 16px var(--box-shadow);
-                                                                                                                                                                                                                                                                    }
+#contact ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-                                                                                                                                                                                                                                                                    .project-tile h2 {
-                                                                                                                                                                                                                                                                        font-family: 'Montserrat', sans-serif;
-                                                                                                                                                                                                                                                                            font-weight: 600;
-                                                                                                                                                                                                                                                                                color: var(--accent-color);
-                                                                                                                                                                                                                                                                                }
+#contact li {
+    display: inline-block;
+}
 
-                                                                                                                                                                                                                                                                                .project-tile p {
-                                                                                                                                                                                                                                                                                    font-size: 1rem;
-                                                                                                                                                                                                                                                                                        color: var(--text-primary);
-                                                                                                                                                                                                                                                                                        }
+#contact a {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
 
-                                                                                                                                                                                                                                                                                        .project-tile a {
-                                                                                                                                                                                                                                                                                            display: inline-block;
-                                                                                                                                                                                                                                                                                                margin-top: 1rem;
-                                                                                                                                                                                                                                                                                                    color: var(--accent-color);
-                                                                                                                                                                                                                                                                                                        text-decoration: none;
-                                                                                                                                                                                                                                                                                                            font-weight: 500;
-                                                                                                                                                                                                                                                                                                                transition: color 0.3s;
-                                                                                                                                                                                                                                                                                                                }
+#contact a:hover {
+    color: #34495e;
+}
 
-                                                                                                                                                                                                                                                                                                                .project-tile a:hover {
-                                                                                                                                                                                                                                                                                                                    color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                    }
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
 
-                                                                                                                                                                                                                                                                                                                    /* Footer styling */
-                                                                                                                                                                                                                                                                                                                    footer {
-                                                                                                                                                                                                                                                                                                                        background: var(--header-footer-bg);
-                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                                padding: 1rem;
-                                                                                                                                                                                                                                                                                                                                    text-align: center;
-                                                                                                                                                                                                                                                                                                                                        box-shadow: 0 -4px 8px var(--box-shadow);
-                                                                                                                                                                                                                                                                                                                                            position: relative;
-                                                                                                                                                                                                                                                                                                                                                bottom: 0;
-                                                                                                                                                                                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                                                                                                                                                                        transition: background-color 0.3s, color 0.3s;
-                                                                                                                                                                                                                                                                                                                                                        }
+/* Fade-in Effect */
+.fade-in-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
 
-                                                                                                                                                                                                                                                                                                                                                        footer p {
-                                                                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                font-size: 0.9rem;
-                                                                                                                                                                                                                                                                                                                                                                }
+/* Responsive Design */
+@media (max-width: 768px) {
+    #projects {
+        padding: 2rem 2%;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                /* Contact section */
-                                                                                                                                                                                                                                                                                                                                                                #contact ul {
-                                                                                                                                                                                                                                                                                                                                                                    list-style: none;
-                                                                                                                                                                                                                                                                                                                                                                        display: flex;
-                                                                                                                                                                                                                                                                                                                                                                            justify-content: center;
-                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                    padding: 1rem 0;
-                                                                                                                                                                                                                                                                                                                                                                                    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                    #contact ul li {
-                                                                                                                                                                                                                                                                                                                                                                                        margin: 0 10px;
-                                                                                                                                                                                                                                                                                                                                                                                        }
+    .project-tile {
+        width: 100%;
+        max-width: 350px;
+    }
 
-                                                                                                                                                                                                                                                                                                                                                                                        #contact a {
-                                                                                                                                                                                                                                                                                                                                                                                            color: var(--accent-color);
-                                                                                                                                                                                                                                                                                                                                                                                                text-decoration: none;
-                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 2rem;
-                                                                                                                                                                                                                                                                                                                                                                                                        transition: color 0.3s, transform 0.3s;
-                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                        #contact a:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                                                                                                                transform: scale(1.1);
-                                                                                                                                                                                                                                                                                                                                                                                                                }
-@media only screen and (max-width: 480px) {
- * {
-
-font-size: 16px
- }
-
+    #welcome-section {
+        padding: 3rem 2%;
+    }
 }
