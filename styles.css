@@ -1,273 +1,156 @@
-:root {
-        --background-gradient: linear-gradient(145deg, #1e3a8a, #3b82f6);
-            --header-footer-bg: #1f2937; /* Dark slate */
-                --section-bg: #2d3748; /* Dark gray for sections */
-                    --text-primary: #e2e8f0; /* Light gray for text */
-                        --link-hover: #3b82f6; /* Light blue for hover */
-                            --card-bg: #374151; /* Slightly lighter dark for project cards */
-                                --accent-color: #38bdf8; /* Light blue accent */
-                                    --box-shadow: rgba(0, 0, 0, 0.3);
-                                    }
-
-                                    /* Body styling */
-                                    body {
-                                        font-family: 'Roboto', sans-serif;
-                                            line-height: 1.6;
-                                                color: var(--text-primary);
-                                                    background: var(--background-gradient);
-                                                        margin: 0;
-                                                            padding-top: 60px;
-                                                                transition: background-color 0.3s, color 0.3s;
-                                                                }
-
-                                                                /* Header styling */
-                                                                header {
-                                                                    background: var(--header-footer-bg);
-                                                                        color: var(--text-primary);
-                                                                            padding: 1rem;
-                                                                                text-align: center;
-                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                        position: fixed;
-                                                                                            top: 0;
-                                                                                                left: 0;
-                                                                                                    width: 100%;
-                                                                                                        z-index: 1000;
-                                                                                                            transition: background-color 0.3s;
-                                                                                                            }
-
-                                                                                                            /* Navigation styles */
-                                                                                                            nav ul {
-                                                                                                                list-style: none;
-                                                                                                                    padding: 0;
-                                                                                                                    }
-
-                                                                                                                    nav ul li {
-                                                                                                                        display: inline;
-                                                                                                                            margin-right: 15px;
-                                                                                                                            }
-
-                                                                                                                            nav ul li a {
-                                                                                                                                color: var(--text-primary);
-                                                                                                                                    text-decoration: none;
-                                                                                                                                        font-weight: 700;
-                                                                                                                                            transition: color 0.3s;
-                                                                                                                                            }
-
-                                                                                                                                            nav ul li a:hover {
-                                                                                                                                                color: var(--link-hover);
-                                                                                                                                                }
-
-                                                                                                                                                /* Welcome section */
-                                                                                                                                                #welcome-section {
-                                                                                                                                                    text-align: center;
-                                                                                                                                                        padding: 4rem 1rem;
-                                                                                                                                                            background: var(--section-bg);
-                                                                                                                                                                border-radius: 10px;
-                                                                                                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                                                                                                        color: var(--text-primary);
-                                                                                                                                                                        }
-
-                                                                                                                                                                        #welcome-section h1 {
-                                                                                                                                                                            font-family: 'Montserrat', sans-serif;
-                                                                                                                                                                                font-weight: 600;
-                                                                                                                                                                                    font-size: 2.5rem;
-                                                                                                                                                                                        margin-bottom: 1rem;
-                                                                                                                                                                                            color: var(--accent-color);
-                                                                                                                                                                                                text-shadow: 0 0 8px var(--accent-color);
-                                                                                                                                                                                                }
-
-                                                                                                                                                                                                #welcome-section p {
-                                                                                                                                                                                                    font-size: 1.5rem;
-                                                                                                                                                                                                        margin: 0;
-                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                        /* Projects section styling */
-                                                                                                                                                                                                        #projects {
-                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                flex-wrap: wrap;
-                                                                                                                                                                                                                    justify-content: space-around;
-                                                                                                                                                                                                                        padding: 2rem;
-                                                                                                                                                                                                                            background: var(--section-bg);
-                                                                                                                                                                                                                            }
-
-                               @keyframes fadeInUp {
-                                       from {
-                                               opacity: 0;
-                                                       transform: translateY(50px);
-                                                           }
-                                                               to {
-                                                                       opacity: 1;
-                                                                               transform: translateY(0);
-                                                                                   }
-                                                                                   }
-
-                                                                                   .fade-in-up {
-                                                                                       opacity: 0;
-                                                                                           transform: translateY(50px);
-                                                                                               animation: fadeInUp 1s ease-out forwards;
-                                                                                               }
-
-                                                                                                                                                                                                                        .project-tile {
-                                                                                                                                                                                                                                width: 300px;
-                                                                                                                                                                                                                                    background: var(--card-bg);
-                                                                                                                                                                                                                                        margin: 1rem;
-                                                                                                                                                                                                                                            padding: 1rem;
-                                                                                                                                                                                                                                                border-radius: 8px;
-                                                                                                                                                                                                                                                    box-shadow: 0 4px 8px var(--box-shadow);
-                                                                                                                                                                                                                                                        text-align: center;
-                                                                                                                                                                                                                                                            transition: transform 0.3s, box-shadow 0.3s;
-                                                                                                                                                                                                                                                            }
-
-                                                       .project-tile img {
-                                                               width: 100%; /* Ensures the image takes up the full width of its container */
-                                                                   height: auto; /* Maintains the aspect ratio */
-                                                                       border-radius: 8px; /* Gives the images rounded corners */
-                                                                           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
-                                                                               transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animates changes for hover effects */
-                                                                               }
-
-                                                                               .project-tile img:hover {
-                                                                                   transform: scale(1.05); /* Slight zoom on hover */
-                                                                                       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhances shadow on hover */
-                                                                                       }
-                                                                                       
-                                                                                                                                                                    .hidden {
-                                                                                                                                                                            opacity: 0;
-                                                                                                                                                                                transform: translateY(50px);
-                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                            .project-tile:hover {
-                                                                                                                                                                                                                                                                transform: scale(1.05);
-                                                                                                                                                                                                                                                                    box-shadow: 0 8px 16px var(--box-shadow);
-                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                    .project-tile h2 {
-                                                                                                                                                                                                                                                                        font-family: 'Montserrat', sans-serif;
-                                                                                                                                                                                                                                                                            font-weight: 600;
-                                                                                                                                                                                                                                                                                color: var(--accent-color);
-                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                .project-tile p {
-                                                                                                                                                                                                                                                                                    font-size: 1rem;
-                                                                                                                                                                                                                                                                                        color: var(--text-primary);
-                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                        .project-tile a {
-                                                                                                                                                                                                                                                                                            display: inline-block;
-                                                                                                                                                                                                                                                                                                margin-top: 1rem;
-                                                                                                                                                                                                                                                                                                    color: var(--accent-color);
-                                                                                                                                                                                                                                                                                                        text-decoration: none;
-                                                                                                                                                                                                                                                                                                            font-weight: 500;
-                                                                                                                                                                                                                                                                                                                transition: color 0.3s;
-                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                .project-tile a:hover {
-                                                                                                                                                                                                                                                                                                                    color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                    }
-
-                                                        /* Skills Section Styling */
-                                                        #skills {
-                                                          padding: 2rem;
-                                                            background-color: #121212; /* Change as per your theme */
-                                                              color: #f0f0f0;
-                                                                text-align: center;
-                                                                }
-                                                                
-                                                                #skills h2 {
-                                                                  font-size: 2rem;
-                                                                    margin-bottom: 1.5rem;
-                                                                      color: #00bcd4;
-                                                                      }
-                                                                      
-                                                                      /* Individual Skill Styling */
-                                                                      .skill {
-                                                                        margin-bottom: 1rem;
-                                                                          text-align: left;
-                                                                          }
-                                                                          
-                                                                          .skill-name {
-                                                                            font-size: 1.2rem;
-                                                                              margin-bottom: 0.5rem;
-                                                                                display: block;
-                                                                                  font-weight: bold;
-                                                                                  }
-                                                                                  
-                                                                                  /* Progress Bar Styling */
-                                                                                  .progress-bar {
-                                                                                    width: 100%;
-                                                                                      background-color: #333;
-                                                                                        border-radius: 20px;
-                                                                                          overflow: hidden;
-                                                                                            height: 20px;
-                                                                                            }
-                                                                                            
-                                                                                            .progress {
-                                                                                              height: 100%;
-                                                                                                background: linear-gradient(90deg, #00bcd4, #00e676);
-                                                                                                  transition: width 1s ease-in-out;
-                                                                                                    border-radius: 20px;
-                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                                /* Footer styling */
-                                                                                                                                                                                                                                                                                                                    footer {
-                                                                                                                                                                                                                                                                                                                        background: var(--header-footer-bg);
-                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                                padding: 1rem;
-                                                                                                                                                                                                                                                                                                                                    text-align: center;
-                                                                                                                                                                                                                                                                                                                                        box-shadow: 0 -4px 8px var(--box-shadow);
-                                                                                                                                                                                                                                                                                                                                            position: relative;
-                                                                                                                                                                                                                                                                                                                                                bottom: 0;
-                                                                                                                                                                                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                                                                                                                                                                        transition: background-color 0.3s, color 0.3s;
-                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                        footer p {
-                                                                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                font-size: 0.9rem;
-                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                /* Contact section */
-                                                                                                                                                                                                                                                                                                                                                                #contact ul {
-                                                                                                                                                                                                                                                                                                                                                                    list-style: none;
-                                                                                                                                                                                                                                                                                                                                                                        display: flex;
-                                                                                                                                                                                                                                                                                                                                                                            justify-content: center;
-                                                                                                                                                                                                                                                                                                                                                                                margin: 0;
-                                                                                                                                                                                                                                                                                                                                                                                    padding: 1rem 0;
-                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                    #contact ul li {
-                                                                                                                                                                                                                                                                                                                                                                                        margin: 0 10px;
-                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                        #contact a {
-                                                                                                                                                                                                                                                                                                                                                                                            color: var(--accent-color);
-                                                                                                                                                                                                                                                                                                                                                                                                text-decoration: none;
-                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 2rem;
-                                                                                                                                                                                                                                                                                                                                                                                                        transition: color 0.3s, transform 0.3s;
-                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                        #contact a:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                            color: var(--text-primary);
-                                                                                                                                                                                                                                                                                                                                                                                                                transform: scale(1.1);
-                                                                         }
-@media only screen and (max-width: 480px) {
- * {
-
-font-size: 16px
- }
-
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ff9800, #ff5722);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Section Styles */
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.project-card {
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-card h3 {
+  font-size: 1.2rem;
+}
+.project-card .btn {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.project-card .btn:hover {
+  background: #ff9800;
+}
+
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+/* Contact Section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact .btn {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contact .btn:hover {
+  background: #ff5722;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-      #skills {
-          padding: 1rem;
-            }
-
-              .progress-bar {
-                  height: 15px;
-                    }
-
-                      .skill-name {
-                          font-size: 1rem;
-                            }
-                            }
-
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .skills-list {
+    flex-direction: column;
+  }
+}
