@@ -23,6 +23,19 @@
             animation: blink 0.7s steps(1) infinite;
         }
 
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-in-up 1s forwards;
+        }
+
+        @keyframes fade-in-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @keyframes blink {
             50% {
                 border-color: transparent;
@@ -48,6 +61,10 @@
 
     <section id="projects">
         <!-- Projects Content Here -->
+        <div class="project-tile hidden">
+            <h2>Project Title</h2>
+            <p>Project description goes here.</p>
+        </div>
     </section>
 
     <section id="contact">
@@ -63,6 +80,19 @@
     </footer>
 
     <script>
+        // Fade-in-up effect with Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    entry.target.classList.remove('hidden');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
         // Typewriter for the <h1>
         const typewriterTextH1 = "Welcome to My Portfolio";
         const typewriterElementH1 = document.getElementById("typewriter-h1");
@@ -99,5 +129,4 @@
 
     </script>
 </body>
-    </html>
-    
+</html>
