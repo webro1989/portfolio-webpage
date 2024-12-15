@@ -104,11 +104,12 @@ header nav a {
 #contact2 ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
 #contact2 li {
-    display: inline-block;
+    display: inline;
 }
 
 #contact2 a {
